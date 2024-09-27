@@ -146,7 +146,7 @@ private class Observer<T: UITableViewCell>: NSObject, UITextFieldDelegate where 
     
     fileprivate dynamic func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let textFieldRowFormer = textFieldRowFormer else { return false }
-        if let returnHandler = textFieldRowFormer.onReturn2 {
+        if let returnHandler = textFieldRowFormer.onReturn {
             returnHandler(textField.text ?? "")
             return false
         }
